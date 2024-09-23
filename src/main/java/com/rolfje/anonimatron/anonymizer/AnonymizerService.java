@@ -22,22 +22,40 @@ public class AnonymizerService {
 		this.synonymCache = new SynonymCache();
 
 		// Custom anonymizers which produce more life-like data
-		registerAnonymizer(new StringAnonymizer());
-		registerAnonymizer(new UUIDAnonymizer());
-		registerAnonymizer(new RomanNameGenerator());
-		registerAnonymizer(new ElvenNameGenerator());
-		registerAnonymizer(new EmailAddressAnonymizer());
-		registerAnonymizer(new DutchBSNAnononymizer());
-		registerAnonymizer(new DutchBankAccountAnononymizer());
-		registerAnonymizer(new DutchZipCodeAnonymizer());
-		registerAnonymizer(new DigitStringAnonymizer());
+		registerAnonymizer(new Bic());
 		registerAnonymizer(new CharacterStringAnonymizer());
 		registerAnonymizer(new CharacterStringPrefetchAnonymizer());
-		registerAnonymizer(new DateAnonymizer());
-		registerAnonymizer(new IbanAnonymizer());
-		registerAnonymizer(new IPAddressV4Anonymizer());
-
+		registerAnonymizer(new City());
+		registerAnonymizer(new CompanyName());
+		registerAnonymizer(new CompanySuffix());
 		registerAnonymizer(new CountryCodeAnonymizer());
+		registerAnonymizer(new DateAnonymizer());
+		registerAnonymizer(new DigitStringAnonymizer());
+		registerAnonymizer(new DutchBankAccountAnononymizer());
+		registerAnonymizer(new DutchBSNAnononymizer());
+		registerAnonymizer(new DutchZipCodeAnonymizer());
+		registerAnonymizer(new ElvenNameGenerator());
+		registerAnonymizer(new EmailAddressAnonymizer());
+		registerAnonymizer(new FirstName());
+		registerAnonymizer(new FixedValue());
+		registerAnonymizer(new FullAddress());
+		registerAnonymizer(new FullName());
+		registerAnonymizer(new IbanAnonymizer());
+		registerAnonymizer(new IbanFromList());
+		registerAnonymizer(new IPAddressV4Anonymizer());
+		registerAnonymizer(new LastName());
+		registerAnonymizer(new NifCode());
+		registerAnonymizer(new Numerify());
+		registerAnonymizer(new PersonJob());
+		registerAnonymizer(new PersonPrefix());
+		registerAnonymizer(new PhoneNumber());
+		registerAnonymizer(new PostalCode());
+		registerAnonymizer(new RomanNameGenerator());
+		registerAnonymizer(new SecondaryAddress());
+		registerAnonymizer(new State());
+		registerAnonymizer(new StreetAddress());
+		registerAnonymizer(new StringAnonymizer());
+		registerAnonymizer(new UUIDAnonymizer());
 
 		// Default anonymizers for plain Java objects. If we really don't
 		// know or care how the data looks like.
